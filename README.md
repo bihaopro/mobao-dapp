@@ -2,7 +2,7 @@
 
 ## 概述
 
-欢迎使用墨宝(英文：mobao)的DAPP接口，墨宝是专门为墨客提供的钱包服务，主要功能包括ERC20、ERC721的支持、墨客子链的支持，以及墨客DAPP的支持。本文档主要描述墨宝DAPP接口。墨宝DAPP的接口参照墨客[MOACmask](https://github.com/MOACChain/MOACMask)，以及[以太坊Metamask](https://metamask.io/)的实现，提供兼容的接口服务。
+欢迎使用[墨宝](https://mobao.online/)(英文：mobao)的DAPP接口，墨宝是专门为墨客提供的钱包服务，主要功能包括ERC20、ERC721的支持、墨客子链的支持，以及墨客DAPP的支持。本文档主要描述墨宝DAPP接口。墨宝DAPP的接口参照墨客[MOACmask](https://github.com/MOACChain/MOACMask)，以及[以太坊Metamask](https://metamask.io/)的实现，提供兼容的接口服务。
 
 在参考本文档的使用中，需要进一步了解[Metamask](https://metamask.github.io/metamask-docs)或者墨客的[chain3](https://github.com/MOACChain/moac-core/wiki/Chain3)接口可以相应的点击本文中的链接进行参考。
 
