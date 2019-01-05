@@ -34,7 +34,7 @@ if (typeof window.moac === 'undefined') {
 
 ## 接口
 
-1. moac.enable(callback)
+### moac.enable(callback)
 
 返回用户在墨宝的墨客钱包地址列表，当前只返回用户的当前地址。
 
@@ -44,7 +44,7 @@ moac.enable(function(accounts) {
 });
 ```
 
-2. moac.sendAsync(options, callback)
+### moac.sendAsync(options, callback)
 
 发送消息给墨宝，消息格式按[Moac Chain3 JSON-RPC](https://github.com/MOACChain/moac-core/wiki/JSON-RPC)。
 
@@ -66,14 +66,34 @@ moac.sendAsync({
 });
 ```
 
-3. moac.on(eventName, callback)
+### moac.on(eventName, callback)
 
-TODO
+    TODO
 
+
+## 签名功能
 
 ## RPC API
 
+墨宝使用`sendAsync`封装墨客底层的RPC功能，并提供请求转发服务。其中会包括部分需要墨宝用户进行认可、确认等操作，便于用户知悉DAPP对用户账号的使用。
+`sendAsync`使用JSON的数据格式进行交互，并以JSON的数据格式进行回调返回用户请求的信息。
+
+`options`参数依据如下格式进行输入：
+```js
+{
+    method: 'supported json rpc method',
+    params: [json rpc params array],
+    from: 'selected account address'
+}
+```
+
+`callback`回调函数是标准的Javascript回调函数，包括`err`和`result`，其中`err`表示错误信息，`result`是回调结果，`result`结果会根据每个json rpc请求的接口不一样而不一样，请参考相应的RPC接口文档。
+
+
 目前支持的JSONRPC API包括如下：
 
-### 接口
+### 支持的接口列表
     
+    1. chain3_clientVersion
+    2. chain3_sha3
+
