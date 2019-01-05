@@ -102,6 +102,6 @@ Metamask提供三类签名方法，第一类是[`eth_sign`](https://metamask.git
 
 目前支持的JSONRPC API包括如下：
 
-    1. chain3_clientVersion
-    2. chain3_sha3
+    1. [chain3_clientVersion](https://github.com/MOACChain/moac-core/wiki/JSON-RPC#chain3_clientversion)
+    2. [chain3_sha3](https://github.com/MOACChain/moac-core/wiki/JSON-RPC#chain3_sha3)
 
