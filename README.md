@@ -73,12 +73,17 @@ moac.sendAsync({
 
 ## 签名功能
 
-如果你需要通过签名等操作，可以使用墨宝提供的签名功能函数功能，调用方式也是通过sendAsync。墨宝提供的签名方法为`mc_sign`，实现的原理和[Metamask]()的[`personal_sign`](https://metamask.github.io/metamask-docs/API_Reference/Signing_Data/Personal_Sign)签名对应。Metamask提供三类签名方法，第一类是[`eth_sign`](https://metamask.github.io/metamask-docs/API_Reference/Signing_Data/Eth_Sign)，这个方法可以签署任何数据具有不安全性，所以已经不推荐使用。第二类[`persoal_sign`](https://metamask.github.io/metamask-docs/API_Reference/Signing_Data/Personal_Sign)方法在签署数据前面加了前缀进行区别，借鉴了安全问题。同时，Metamask也提供了其他团队提供的签名方法，例如[signTypedData](https://metamask.github.io/metamask-docs/API_Reference/Signing_Data/Sign_Typed_Data_v1)，包括0xProtocol和SpankChain提供的。墨宝为了方便用户使用，只提供`personal_sign`的签名方法，也避免歧义，后面有其他需要可以进行添加。
+如果你需要通过签名等操作，可以使用墨宝提供的签名功能函数功能，调用方式也是通过sendAsync。墨宝提供的签名方法为`mc_sign`，实现的原理和[Metamask]()的[`personal_sign`](https://metamask.github.io/metamask-docs/API_Reference/Signing_Data/Personal_Sign)签名对应。
+
+Metamask提供三类签名方法，第一类是[`eth_sign`](https://metamask.github.io/metamask-docs/API_Reference/Signing_Data/Eth_Sign)，这个方法可以签署任何数据具有不安全性，所以已经不推荐使用。第二类[`persoal_sign`](https://metamask.github.io/metamask-docs/API_Reference/Signing_Data/Personal_Sign)方法在签署数据前面加了前缀进行区别，借鉴了安全问题。同时，Metamask也提供了其他团队提供的签名方法，例如[signTypedData](https://metamask.github.io/metamask-docs/API_Reference/Signing_Data/Sign_Typed_Data_v1)，包括0xProtocol和SpankChain提供的。
+
+墨宝为了方便用户使用，只提供`personal_sign`的签名方法，也避免歧义，后面有其他需要可以进行添加。
 
 
 ## RPC API
 
 墨宝使用`sendAsync`封装墨客底层的RPC功能，并提供请求转发服务。其中会包括部分需要墨宝用户进行认可、确认等操作，便于用户知悉DAPP对用户账号的使用。
+
 `sendAsync`使用JSON的数据格式进行交互，并以JSON的数据格式进行回调返回用户请求的信息。
 
 `options`参数依据如下格式进行输入：
@@ -92,11 +97,11 @@ moac.sendAsync({
 
 `callback`回调函数是标准的Javascript回调函数，包括`err`和`result`，其中`err`表示错误信息，`result`是回调结果，`result`结果会根据每个json rpc请求的接口不一样而不一样，请参考相应的RPC接口文档。
 
+`err`表示的是在请求墨宝的过程中产生的错误，`result`里面包括在执行用户请求的方法时墨客RPC中出现的错误。
+
 
 目前支持的JSONRPC API包括如下：
 
-### 支持的接口列表
-    
     1. chain3_clientVersion
     2. chain3_sha3
 
