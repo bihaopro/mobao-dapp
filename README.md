@@ -10,7 +10,7 @@
 
 ## 使用
 
-使用墨宝DAPP接口的第一步是判断是否在浏览器里面已经注入了墨宝DAPP接口，可以通过如下方式进行检测
+使用墨宝DAPP接口的第一步是判断是否在浏览器里面已经提供了墨宝DAPP接口，可以通过如下方式进行检测
     
 ```js
 if (typeof window.moac === 'undefined') {
@@ -72,6 +72,9 @@ moac.sendAsync({
 
 
 ## 签名功能
+
+如果你需要通过签名等操作，可以使用墨宝提供的签名功能函数功能，调用方式也是通过sendAsync。墨宝提供的签名方法为`mc_sign`，实现的原理和[Metamask]()的[`personal_sign`](https://metamask.github.io/metamask-docs/API_Reference/Signing_Data/Personal_Sign)签名对应。Metamask提供三类签名方法，第一类是[`eth_sign`](https://metamask.github.io/metamask-docs/API_Reference/Signing_Data/Eth_Sign)，这个方法可以签署任何数据具有不安全性，所以已经不推荐使用。第二类[`persoal_sign`](https://metamask.github.io/metamask-docs/API_Reference/Signing_Data/Personal_Sign)方法在签署数据前面加了前缀进行区别，借鉴了安全问题。同时，Metamask也提供了其他团队提供的签名方法，例如[signTypedData](https://metamask.github.io/metamask-docs/API_Reference/Signing_Data/Sign_Typed_Data_v1)，包括0xProtocol和SpankChain提供的。墨宝为了方便用户使用，只提供`personal_sign`的签名方法，也避免歧义，后面有其他需要可以进行添加。
+
 
 ## RPC API
 
