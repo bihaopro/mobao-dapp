@@ -27,10 +27,10 @@ if (typeof window.moac === 'undefined') {
 
 墨宝在启动DAP片的使用提供了如下一些属性，可以供用户进行DAPP开发使用：
 
-    1. networkVersion，当前墨客网络ID
-    2. isMobao，是否是墨宝的DAP接口，返回true或false
-    3. version，DAPP的接口版本
-    4. selectedAddress，当前用户的钱包地址
+    1. `networkVersion`，当前墨客网络ID
+    2. `isMobao`，是否是墨宝的DAP接口，返回`true`或`false`
+    3. `version`，DAPP的接口版本
+    4. `selectedAddress`，当前用户的钱包地址
 
 ## 接口
 
