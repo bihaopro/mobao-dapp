@@ -29,7 +29,7 @@ if (typeof window.moac === 'undefined') {
 
     1. networkVersion，当前墨客网络ID
     2. isMobao，是否是墨宝的DAP接口，返回true或false
-    3. dappVersion，DAPP的接口版本
+    3. version，DAPP的接口版本
     4. selectedAddress，当前用户的钱包地址
 
 ## 接口
