@@ -88,18 +88,20 @@ moac.sendAsync({
 开发测试DAPP，请下载&quot;墨宝开发测试版&quot;（以下简称&quot;墨宝&quot;），下载地址：[https://fir.im/mobaotest](https://fir.im/mobaotest)
 
 ![image](https://github.com/bihaopro/mobao-dapp/blob/master/images/1.jpg)
-
-
+![image](https://github.com/bihaopro/mobao-dapp/blob/master/images/2.jpg)
 
 墨宝DAPP列表里已经提供官方版的DAPP示例可供参考
 。
 
+![image](https://github.com/bihaopro/mobao-dapp/blob/master/images/3.jpg)
+![image](https://github.com/bihaopro/mobao-dapp/blob/master/images/4.jpg)
 
 墨宝安装完成后，创建或恢复钱包至少一个地址，选择墨宝中的“发现”，点击“自定义添加DAPP”，输入名称、URL、ABI点击确定即可，DAPP列表中就会出现刚刚添加的DAPP。
 
-
-
 页面在墨宝打开之后，墨宝钱包会注入moac对象，可以使用window.moac访问，据此判断DAPP是否是在墨宝中打开。
+
+![image](https://github.com/bihaopro/mobao-dapp/blob/master/images/5.jpg)
+![image](https://github.com/bihaopro/mobao-dapp/blob/master/images/6.jpg)
 
 ```js
 if (typeof window.moac === 'undefined') {
