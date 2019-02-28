@@ -8,6 +8,11 @@
 
 说明：墨宝只提供基于***window.moac***对象的形式进行提供DAP接口，不提供基于provider的DAP接口使用，同时墨客提供默认的公开RPC服务，如果需要自定义用户自己的RPC服务，可以在墨宝的设置里面进行设置。
 
+## DAPP开发参考案例
+
+以下是DAPP的官方完整示例，可以参考开发
+示例：[https://mobao.halobtc.com/dapp](https://mobao.halobtc.com/dapp)
+
 ## 使用
 
 使用墨宝DAPP接口的第一步是判断是否在浏览器里面已经提供了墨宝DAPP接口，可以通过如下方式进行检测
